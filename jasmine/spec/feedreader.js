@@ -63,11 +63,13 @@ $(function() {
            const body = document.querySelector('body');
            expect(body.classList.contains('menu-hidden')).toBe(true);
          });
+
          /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+
           it('toggle functional', function() {
             const body = document.querySelector('body');
             const menu = document.querySelector('.menu-icon-link');
@@ -76,15 +78,18 @@ $(function() {
             expect(body.classList.contains('menu-hidden')).toBe(false);
           });
     });
+
     /* TODO: Write a new test suite named "Initial Entries" */
 
-describe('Initial Entries', function(){});
+    describe('Initial Entries', function(){});
+
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+
          beforeEach(function(done){
            loadFeed(0, done);
          });
@@ -96,9 +101,24 @@ describe('Initial Entries', function(){});
 
     /* TODO: Write a new test suite named "New Feed Selection" */
 
+    describe('New Feed Selection', function(){
+      const feed = document.querySelector('.feed');
+      const firstFeed = [];
+      beforeEach(function(done){
+        loadFeed(0);
+        Array.from(feed.children).forEach(function(entry){
+          firstFeed.push(entry.innerText);
+        });
+        loadFeed(1, done);
+      })
         /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-
+         it('content changes', function(){
+           Array.from(feed.children).forEach(function(entry,index){
+             expect(entry.innerText === firstFeed[index]).toBe(false);
+           });
+         });
+        });
 }());
