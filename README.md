@@ -16,4 +16,4 @@ In order to run this testing suite for the provided files, please follow downloa
 instructions above.*
 
 *Immense gratitude and credit to Matthew Cranford and his blog for thorough
-walkthroughs and his breakdowns of the code: https://matthewcranford.com/* 
+walkthroughs and his breakdowns of the code from a psuedo-code and logical standpoint.* 
