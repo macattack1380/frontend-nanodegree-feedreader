@@ -83,7 +83,7 @@ $(function() {
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
-    describe('Initial Entries', function(){});
+    describe('Initial Entries', function(){
 
         /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
@@ -100,7 +100,7 @@ $(function() {
            const feed = document.querySelector('.feed');
            expect(feed.children.length > 0).toBe(true);
          });
-
+       });
     /* TODO: Write a new test suite named "New Feed Selection" */
 
     describe('New Feed Selection', function(){
