@@ -84,6 +84,12 @@ $(function() {
     });
 
 
+<<<<<<< HEAD
+||||||| fdbf394... Fix: repaired the Initial Entries test suite
+    describe('Initial Entries', function(){
+=======
+    describe('Initial Entries', function(){});
+>>>>>>> parent of fdbf394... Fix: repaired the Initial Entries test suite
 
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
@@ -103,6 +109,20 @@ $(function() {
         });
     });
 
+<<<<<<< HEAD
+||||||| fdbf394... Fix: repaired the Initial Entries test suite
+         it('completes work', function(){
+           const feed = document.querySelector('.feed');
+           expect(feed.children.length > 0).toBe(true);
+         });
+       });
+=======
+         it('completes work', function(){
+           const feed = document.querySelector('.feed');
+           expect(feed.children.length > 0).toBe(true);
+         });
+
+>>>>>>> parent of fdbf394... Fix: repaired the Initial Entries test suite
     /* TODO: Write a new test suite named "New Feed Selection" */
     describe('New Feed Selection', function() {
         const feed = document.querySelector('.feed');
